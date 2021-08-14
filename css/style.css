@@ -93,6 +93,7 @@ p {
 
 .main-menu nav .active {
   background-color: var(--black);
+  border-radius: 4px;
   margin-bottom: 8px;
   padding: 8px;
 }
@@ -111,9 +112,9 @@ p {
 }
 
 /* ----Main---- */
-/* main {
+main {
   position: relative;
-} */
+}
 
 .wrapper {
   margin: auto;
@@ -349,12 +350,14 @@ form {
   width: 18px;
 }
 
-@media screen and (min-width: 640px) {
-  .header .wrapper {
+@media screen and (min-width: 640px and max-width 980px) {
+  .main-menu,
+  .sticky-menu {
     margin: 55px;
   }
   .main .wrapper {
-    width: 90%;
+    width: 500px;
+    margin: 0 auto;
   }
 }
 
@@ -374,21 +377,24 @@ form {
   .sticky-menu {
     display: block;
     margin-left: 16px;
-    margin-top: 390px;
+    margin-top: 370px;
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1;
   }
 
   .wrapper-main-menu,
   .wrapper-sticky-menu {
     position: relative;
+    top: 0;
     width: 188px;
+    z-index: 1;
   }
 
   .content-main-menu,
   .content-sticky-menu {
     position: absolute;
+    top: 0;
   }
 
   .content-main-menu ul,
@@ -397,8 +403,7 @@ form {
     padding: 0;
   }
 
-  .content-sticky-menu li,
-  .content-main-menu li {
+  .content-sticky-menu li {
     font-weight: 400;
     line-height: 24px;
     margin: 0 0 16px 16px;
@@ -454,7 +459,7 @@ form {
   }
 
   main {
-    margin-top: -320px;
+    margin-top: -300px;
   }
 
   .main .wrapper {
