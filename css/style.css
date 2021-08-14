@@ -55,12 +55,23 @@ p {
   height: 96px;
 }
 /* --Aplicando estilos al menu-- */
-.header {
+.sticky-menu {
+  display: none;
+}
+
+.main-menu,
+.sticky-menu {
   font-size: 14px;
   font-weight: 500;
 }
 
-.header h4 {
+.wrapper-main-menu {
+  margin: auto;
+  width: 328px;
+}
+
+.main-menu h4,
+.sticky-menu h4 {
   color: var(--gray40);
   font-size: 14px;
   line-height: 24px;
@@ -68,11 +79,11 @@ p {
   text-transform: uppercase;
 }
 
-.header .menu ul {
+.main-menu nav ul {
   padding: 0;
 }
 
-.header .menu li {
+.main-menu nav li {
   font-weight: 400;
   list-style: none;
   line-height: 24px;
@@ -80,27 +91,23 @@ p {
   padding-left: 8px;
 }
 
-.header .menu .active {
+.main-menu nav .active {
   background-color: var(--black);
   margin-bottom: 8px;
   padding: 8px;
 }
 
-.header a {
+.main-menu nav a {
   color: var(--gray30);
   text-decoration: none;
 }
 
-.header a:hover {
+.main-menu nav a:hover {
   color: var(--gray10);
 }
 
-.header .active a {
+.main-menu nav .active a {
   color: white;
-}
-
-.menu-content {
-  display: none;
 }
 
 /* ----Main---- */
@@ -356,74 +363,68 @@ form {
   .hero {
     background-size: auto;
     height: 350px;
+    margin-bottom: 64px;
   }
 
-  /* .header {
-    position: sticky;
-    top: 0;
-    z-index: 1;
-  } */
-
-  .header .wrapper {
+  .main-menu {
     margin-left: 16px;
-    position: relative;
-  }
-
-  .header-content {
-    position: absolute;
-    left: 0;
     width: 188px;
   }
 
-  /* .menu-content {
-    position: sticky;
-    top: 20px;
-  } */
-
-  .menu-content .menu-wrapper {
-  }
-
-  .menu-content .menu-sticky {
-  }
-
-  .content {
+  .sticky-menu {
+    display: block;
+    margin-left: 16px;
+    margin-top: 390px;
     position: sticky;
     top: 0;
+    z-index: 100;
   }
 
-  .header .menu ul,
-  .menu-content ol {
+  .wrapper-main-menu,
+  .wrapper-sticky-menu {
+    position: relative;
+    width: 188px;
+  }
+
+  .content-main-menu,
+  .content-sticky-menu {
+    position: absolute;
+  }
+
+  .content-main-menu ul,
+  .content-sticky-menu ol {
     color: var(--gray30);
     padding: 0;
   }
 
-  .menu-content li {
+  .content-sticky-menu li,
+  .content-main-menu li {
     font-weight: 400;
     line-height: 24px;
     margin: 0 0 16px 16px;
+    list-style: none;
   }
 
-  .header .menu .active {
+  .content-main-menu a,
+  .content-sticky-menu a {
+    color: var(--gray30);
+    text-decoration: none;
+  }
+
+  .content-main-menu a:hover,
+  .content-sticky-menu a:hover {
+    color: var(--gray10);
+    cursor: pointer;
+  }
+
+  .content-main-menu .active {
     background-color: var(--black);
     margin-bottom: 8px;
     padding: 8px;
   }
 
-  .header a {
-    color: var(--gray30);
-    text-decoration: none;
-  }
-
-  .header a:hover {
-    color: var(--gray10);
-  }
-
-  .header .active a {
-    color: white;
-  }
-
-  .menu-content {
-    display: none;
+  .active a {
+    color: #ffffff;
   }
 
   h1 {
@@ -450,6 +451,10 @@ form {
     font-size: 14px;
     font-weight: bold;
     line-height: 24px;
+  }
+
+  main {
+    margin-top: -320px;
   }
 
   .main .wrapper {
