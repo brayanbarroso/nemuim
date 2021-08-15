@@ -1,10 +1,9 @@
 :root {
-  --black: #000000;
-  --gray10: #212121;
-  --gray20: #424242;
-  --gray30: #808080;
-  --gray40: #616161;
-  --footer-color: #212429;
+  --background: #251f24;
+  --title: #ffffff;
+  --paragraphs: #a5a3a5;
+  --background-text: #3a3539;
+  --footer-color: #ffffff;
 }
 
 html {
@@ -12,25 +11,26 @@ html {
 }
 
 body {
+  background: var(--background);
   font-family: "Roboto", sans-serif;
   margin: 0;
 }
 
 img {
-  max-width: 100%;
+  max-inline-size: 100%;
 }
 
 h1,
 h2 {
-  color: var(--gray10);
+  color: var(--title);
   font-size: 24px;
   font-weight: 400;
   line-height: 28px;
 }
 
 h3 {
-  background-color: #ffffff;
-  color: var(--gray20);
+  background-color: var(--background);
+  color: var(--title);
   font-size: 20px;
   font-weight: 400;
 }
@@ -40,19 +40,15 @@ hr {
 }
 
 p {
+  color: var(--paragraphs);
   font-size: 16px;
   line-height: 24px;
 }
 
 .hero {
-  background-image: linear-gradient(
-      to top,
-      rgba(255, 255, 255, 0.3),
-      transparent
-    ),
-    url(../images/patron.png);
+  background: linear-gradient(96.07deg, #314755 30.63%, #26a0da 102.18%);
   background-size: contain;
-  height: 96px;
+  block-size: 96px;
 }
 /* --Aplicando estilos al menu-- */
 .sticky-menu {
@@ -66,13 +62,13 @@ p {
 }
 
 .wrapper-main-menu {
-  margin: auto;
-  width: 328px;
+  margin: 0 auto;
+  inline-size: 328px;
 }
 
 .main-menu h4,
 .sticky-menu h4 {
-  color: var(--gray40);
+  color: var(--title);
   font-size: 14px;
   line-height: 24px;
   margin: 16px 0;
@@ -80,7 +76,7 @@ p {
 }
 
 .main-menu nav ul {
-  padding: 0;
+  padding-block: 0;
 }
 
 .main-menu nav li {
@@ -92,19 +88,19 @@ p {
 }
 
 .main-menu nav .active {
-  background-color: var(--black);
+  background-color: #000000;
   border-radius: 4px;
   margin-bottom: 8px;
   padding: 8px;
 }
 
 .main-menu nav a {
-  color: var(--gray30);
+  color: var(--paragraphs);
   text-decoration: none;
 }
 
 .main-menu nav a:hover {
-  color: var(--gray10);
+  color: var(--background-text);
 }
 
 .main-menu nav .active a {
@@ -117,8 +113,8 @@ main {
 }
 
 .wrapper {
-  margin: auto;
-  width: 328px;
+  margin: 0 auto;
+  inline-size: 328px;
 }
 
 .main h1 {
@@ -126,21 +122,16 @@ main {
 }
 
 .main h1 + p {
-  color: var(--gray10);
-  margin-bottom: 40px;
-}
-
-.main-content {
-  background-color: white;
+  margin-block-end: 40px;
 }
 
 .section-content h2 {
-  margin: 40px 0 24px 0;
+  margin-block: 40px 20px;
 }
 
 .section-content .logo {
-  height: 64px;
-  width: 64px;
+  block-size: 64px;
+  inline-size: 64px;
 }
 
 .section-content h3 {
@@ -167,7 +158,6 @@ main {
 }
 
 .section-content p {
-  color: var(--gray20);
   font-style: italic;
   margin-bottom: 24px;
 }
@@ -177,7 +167,7 @@ main {
 }
 
 pre {
-  background-color: #fec62e;
+  background-color: var(--background-text);
   box-sizing: border-box;
   color: var(--black);
   font-family: "Roboto" sans-serif;
@@ -188,15 +178,17 @@ pre {
 }
 
 blockquote {
-  border-left: 4px solid var(--gray10);
+  background: var(--background-text);
+  border-radius: 8px;
   font-size: 24px;
   line-height: 24px;
-  margin: 32px 0;
-  padding-left: 16px;
+  margin-block: 40px;
+  margin-inline: 0px;
+  padding: 8px;
 }
 
 blockquote p {
-  color: var(--gray20);
+  color: var(--paragraphs);
   line-height: 32px;
 }
 
