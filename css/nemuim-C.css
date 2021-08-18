@@ -151,13 +151,14 @@ header h1 {
 }
 
 /* ----Main---- */
-main {
-  position: relative;
-}
-
 .wrapper {
   margin: auto;
   width: 328px;
+}
+
+hr {
+  display: none;
+  border: 1px solid rgba(97, 97, 97, 0.2);
 }
 
 .main-content {
@@ -392,38 +393,29 @@ form {
 
 /* --Desktop-- */
 @media screen and (min-width: 980px) {
-  .hero {
+  /* .hero {
     background-size: auto;
     height: 350px;
     margin-bottom: 64px;
+  } */
+
+  header {
+    width: 966px;
   }
 
-  .main-menu {
-    margin-left: 16px;
-    width: 188px;
+  header h1 {
+    font-size: 60px;
+    line-height: 70.31px;
   }
 
   .sticky-menu {
-    display: block;
-    margin-left: 16px;
-    margin-top: 370px;
-    position: sticky;
-    top: 0;
-    z-index: 1;
+    margin-top: 112px;
   }
 
   .wrapper-main-menu,
   .wrapper-sticky-menu {
-    position: relative;
-    top: 0;
-    width: 188px;
-    z-index: 1;
-  }
-
-  .content-main-menu,
-  .content-sticky-menu {
-    position: absolute;
-    top: 0;
+    margin: auto;
+    width: 966px;
   }
 
   .content-main-menu ul,
@@ -435,8 +427,7 @@ form {
   .content-sticky-menu li {
     font-weight: 400;
     line-height: 24px;
-    margin: 0 0 16px 16px;
-    list-style: none;
+    margin: 0 0 16px 30px;
   }
 
   .content-main-menu a,
@@ -455,15 +446,11 @@ form {
     background-color: var(--black);
     margin-bottom: 8px;
     padding: 8px;
+    width: 280px;
   }
 
   .active a {
     color: #ffffff;
-  }
-
-  h1 {
-    font-size: 60px;
-    line-height: 70px;
   }
 
   h2 {
@@ -477,27 +464,13 @@ form {
   }
 
   hr {
+    display: block;
     margin: 64px 0 64px 0;
-  }
-
-  summary {
-    color: var(--gray40);
-    font-size: 14px;
-    font-weight: bold;
-    line-height: 24px;
-  }
-
-  main {
-    margin-top: -300px;
   }
 
   .main .wrapper {
     margin: auto;
-    width: 902px;
-  }
-
-  .menu-content {
-    display: inline-block;
+    width: 966px;
   }
 
   .section-content .logo {
@@ -538,6 +511,6 @@ form {
     padding: 12px 16px;
     position: absolute;
     top: 1px;
-    right: 32%;
+    right: 40%;
   }
 }
