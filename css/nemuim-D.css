@@ -98,7 +98,6 @@ p {
   font-weight: 400;
   line-height: 24px;
   margin-bottom: 16px;
-  padding-left: 8px;
 }
 
 .main-menu nav .active {
@@ -135,8 +134,6 @@ p {
 }
 
 /* ----Main---- */
-main {
-}
 
 .wrapper {
   margin: auto;
@@ -228,6 +225,7 @@ blockquote {
   line-height: 24px;
   margin: 32px 0;
   padding-left: 16px;
+  margin-left: 20%;
 }
 
 blockquote p {
@@ -408,13 +406,13 @@ form {
   }
 
   .main-menu {
-    margin-left: 16px;
-    width: 188px;
+    display: block;
+    margin-right: 24px;
   }
 
   .sticky-menu {
     display: block;
-    margin-left: 16px;
+    margin-right: 24px;
     margin-top: 370px;
     position: sticky;
     top: 0;
@@ -423,10 +421,9 @@ form {
 
   .wrapper-main-menu,
   .wrapper-sticky-menu {
+    margin: 0 0 0 auto;
     position: relative;
-    top: 0;
     width: 188px;
-    z-index: 1;
   }
 
   .content-main-menu,
@@ -445,7 +442,10 @@ form {
     font-weight: 400;
     line-height: 24px;
     margin: 0 0 16px 16px;
-    list-style: none;
+  }
+
+  .content-sticky-menu h4 {
+    display: block;
   }
 
   .content-main-menu a,
@@ -467,6 +467,15 @@ form {
   }
 
   .active a {
+    color: #ffffff;
+  }
+
+  .content-sticky-menu .active {
+    background: #5551ff;
+    padding: 8px;
+  }
+
+  .content-sticky-menu .active a {
     color: #ffffff;
   }
 
@@ -502,7 +511,7 @@ form {
 
   .main .wrapper {
     margin: auto;
-    width: 902px;
+    width: 903px;
   }
 
   .menu-content {
