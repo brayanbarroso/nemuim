@@ -7,6 +7,6 @@ Proyecto del curso Esencial de HTML y CSS
 - HTML5
 - CSS3
 
-[link proyecto]: https://brayanbarroso.github.io/nemuim/
+Link del proyecto --> https://brayanbarroso.github.io/nemuim
 
-![Imagen Proyecto]("./images/Nemium A-1.jpg")
+![](https://github.com/brayanbarroso/nemuim/blob/master/images/Nemium%20A-1.jpg)
