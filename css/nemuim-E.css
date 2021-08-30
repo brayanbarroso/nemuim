@@ -42,9 +42,13 @@ h4 {
   margin: 16px 0;
 }
 
-hr {
+.line-mobile {
   border: 1px solid rgba(97, 97, 97, 0.2);
   margin-bottom: 40px;
+}
+
+.line-desktop {
+  display: none;
 }
 
 p {
@@ -386,56 +390,75 @@ form {
     height: 350px;
     margin-bottom: 64px;
   } */
+  .main-menu {
+    inline-size: 306px;
+    margin-block-start: 100px;
+    margin-inline-start: 20px;
+  }
+
+  .main-menu ul {
+    inline-size: 306px;
+  }
+
   .sticky-menu {
-    margin-top: 300px;
-    margin-bottom: 64px;
+    display: inline-block;
+    inline-size: 306px;
+    margin-inline-start: 20px;
+    margin-block-start: 370px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
   }
 
   .wrapper-main-menu,
   .wrapper-sticky-menu {
     position: relative;
-    width: 306px;
+    top: 0;
+    inline-size: 306px;
+    z-index: 1;
   }
 
   .content-main-menu,
   .content-sticky-menu {
     position: absolute;
-    left: 0;
+    top: 0;
   }
 
   .content-main-menu ul,
   .content-sticky-menu ol {
-    color: var(--gray30);
+    color: var(--paragraphs);
     padding: 0;
   }
 
   .content-sticky-menu li {
     font-weight: 400;
     line-height: 24px;
-    margin: 0 0 16px 30px;
+    margin: 0 0 16px 16px;
   }
 
   .content-main-menu a,
   .content-sticky-menu a {
-    color: var(--gray30);
+    color: var(--paragraphs);
     text-decoration: none;
   }
 
   .content-main-menu a:hover,
   .content-sticky-menu a:hover {
-    color: var(--gray10);
+    color: var(--background-text);
     cursor: pointer;
   }
 
   .content-main-menu .active {
-    background-color: var(--black);
-    margin-bottom: 8px;
+    margin-inline-end: 8px;
     padding: 8px;
-    width: 280px;
   }
 
   .active a {
     color: #ffffff;
+  }
+
+  details {
+    width: 190px;
   }
 
   h2 {
@@ -444,18 +467,34 @@ form {
   }
 
   h3 {
-    font-size: 24px;
-    line-height: 28px;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 39.01px;
   }
 
-  hr {
+  .line-mobile {
+    display: none;
+  }
+
+  .line-desktop {
+    border: 1px solid rgba(97, 97, 97, 0.2);
     display: block;
-    margin: 64px 0 64px 0;
+    margin-bottom: 40px;
+    margin-top: 58px;
+  }
+
+  main {
+    margin-block-start: -455px;
   }
 
   .main .wrapper {
     margin: auto;
     width: 636px;
+  }
+
+  .main-content h1 {
+    font-size: 64px;
+    line-height: 78.02px;
   }
 
   .section-content .logo {
